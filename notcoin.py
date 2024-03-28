@@ -367,7 +367,7 @@ class clicker:
             return False
         
     
-    def startMin(self):
+    async def startMin(self):
         _sh = -1
         _sc = 20
         self.mining_started = True
