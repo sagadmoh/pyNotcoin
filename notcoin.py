@@ -87,13 +87,13 @@ class ProxyRequests:
         self._goods = []
         self.proxies = self.refreshProxies() + self.refreshProxies(protocol='socks5')
     
-    async def get_proxies(self):
+    def get_proxies(self):
         if time.time() - self._time > 30:
             self.proxies = self.refreshProxies() + self.refreshProxies(protocol='socks5')
             try:
-                await _sendMessage(self.proxies)
+                print("------------------",self.proxies,"------------------")
             except:
-                await _sendMessage("Refres Proxies")
+                print("-----------------","Refres Proxies","------------------")
         
         return self.proxies
     
@@ -387,12 +387,12 @@ class clicker:
                         try:
                             _sleepTime = data['limitCoins'] / data['miningPerTime']
                             print('[~] Sleeping For ', _sleepTime, 'Seconds ...')
-                            _sendMessage('[~] Sleeping For ', _sleepTime, 'Seconds ...')
                         except:
                             _sleepTime = 600
                         self.mining_stats = self._mining_stats[0]
-                        _sendMessage('[~] Sleeping For ', _sleepTime, 'Seconds ...')
+                        print('[~] Sleeping For ', _sleepTime, 'Seconds ...')
                         time.sleep(_sleepTime)
+                        print("---------Wake up2~-----------------")
                 
                 if getData['data'][0]['turboTimes'] > 0:
                     print('')
@@ -406,9 +406,9 @@ class clicker:
                 print(f'[!] Mining {_sc} coins field!')
                 print('[~] Generating New Auth')
                 time.sleep(random.randint(2, 4))
-                _sendMessage("Sleep except")
+                print("----------Sleep except----------")
                 self.webAppData = self.generateAuthToken()
-                _sendMessage("WakeUp except")
+                print("--------WakeUp except---------")
     
     def start(self):
         if not self.mining_started:
