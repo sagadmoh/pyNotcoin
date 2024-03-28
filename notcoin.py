@@ -367,7 +367,7 @@ class clicker:
             return False
         
     
-    async def startMin(self):
+    def startMin(self):
         _sh = -1
         _sc = 20
         self.mining_started = True
@@ -387,11 +387,11 @@ class clicker:
                         try:
                             _sleepTime = data['limitCoins'] / data['miningPerTime']
                             print('[~] Sleeping For ', _sleepTime, 'Seconds ...')
-                            await _sendMessage('[~] Sleeping For ', _sleepTime, 'Seconds ...')
+                            _sendMessage('[~] Sleeping For ', _sleepTime, 'Seconds ...')
                         except:
                             _sleepTime = 600
                         self.mining_stats = self._mining_stats[0]
-                        await _sendMessage('[~] Sleeping For ', _sleepTime, 'Seconds ...')
+                        _sendMessage('[~] Sleeping For ', _sleepTime, 'Seconds ...')
                         time.sleep(_sleepTime)
                 
                 if getData['data'][0]['turboTimes'] > 0:
@@ -412,7 +412,7 @@ class clicker:
     
     def start(self):
         if not self.mining_started:
-            Thread(target=await self.startMin).start()
+            Thread(target = self.startMin).start()
         
     def stop(self):
         self.mining_started = False
