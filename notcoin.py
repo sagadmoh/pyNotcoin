@@ -412,7 +412,7 @@ class clicker:
     
     def start(self):
         if not self.mining_started:
-            Thread(target=self.startMin).start()
+            Thread(await target=self.startMin).start()
         
     def stop(self):
         self.mining_started = False
