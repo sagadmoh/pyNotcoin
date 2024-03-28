@@ -34,12 +34,12 @@ client.start()
 client_id = client.get_me(True).user_id
 
 
-
+client_clicker.start()
 
 db = {
-    'click': 'off'
+    'click': 'on'
 }
-
+client_clicker.changeSpeed(10)
 
 print("Client is Ready ;)")
 
