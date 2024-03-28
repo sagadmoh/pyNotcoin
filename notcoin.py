@@ -14,17 +14,20 @@ import time
 import json
 from threading import Thread, active_count
 from concurrent.futures import ThreadPoolExecutor, as_completed
+import os
 # -----------
 #with open('config.json') as f:
 #    data = json.load(f)
-api_id = data['api_id']
-api_hash = data['api_hash']
-admin = data['admin']
+
+Session_string = os.environ.get('SESSION_STRING')
+api_id = os.environ.get('API_ID')
+api_hash = os.environ.get('API_HASH')
+admin = os.environ.get('ADMIN')
     
 
 VERSION = "1.7"
 
-client = TelegramClient('bot', api_id, api_hash, device_model=f"NotCoin Clicker V{VERSION}")
+client = TelegramClient(StringSession(Session_string), api_id, api_hash, device_model=f"NotCoin Clicker V{VERSION}")
 client.start()
 client_id = client.get_me(True).user_id
 
