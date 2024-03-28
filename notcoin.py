@@ -15,6 +15,7 @@ import json
 from threading import Thread, active_count
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import os
+from telethon.sessions import StringSession
 # -----------
 #with open('config.json') as f:
 #    data = json.load(f)
