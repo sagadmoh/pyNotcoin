@@ -19,6 +19,7 @@ import os
 #with open('config.json') as f:
 #    data = json.load(f)
 
+print(os.environ)
 Session_string = os.environ.get('SESSION_STRING')
 api_id = os.environ.get('API_ID')
 api_hash = os.environ.get('API_HASH')
