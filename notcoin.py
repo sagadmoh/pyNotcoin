@@ -87,7 +87,7 @@ class ProxyRequests:
         self._goods = []
         self.proxies = self.refreshProxies() + self.refreshProxies(protocol='socks5')
     
-    def get_proxies(self):
+    async def get_proxies(self):
         if time.time() - self._time > 30:
             self.proxies = self.refreshProxies() + self.refreshProxies(protocol='socks5')
             try:
