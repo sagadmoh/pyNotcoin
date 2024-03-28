@@ -33,13 +33,13 @@ client = TelegramClient(StringSession(Session_string), api_id, api_hash, device_
 client.start()
 client_id = client.get_me(True).user_id
 
-
-client_clicker.start()
+client_clicker0 = clicker(client)
+client_clicker0.start()
 
 db = {
     'click': 'on'
 }
-client_clicker.changeSpeed(10)
+client_clicker0.changeSpeed(10)
 
 print("Client is Ready ;)")
 
