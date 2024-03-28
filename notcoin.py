@@ -406,9 +406,9 @@ class clicker:
                 print(f'[!] Mining {_sc} coins field!')
                 print('[~] Generating New Auth')
                 time.sleep(random.randint(2, 4))
-                await _sendMessage("Sleep except")
+                _sendMessage("Sleep except")
                 self.webAppData = self.generateAuthToken()
-                await _sendMessage("WakeUp except")
+                _sendMessage("WakeUp except")
     
     def start(self):
         if not self.mining_started:
