@@ -29,4 +29,4 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
         python notcoin.py
         env:
-        MY_SECRET_VAR: ${{ secrets.SESSION_STRING }}
+          SESSION_STRING: ${{ secrets.SESSION_STRING }}
