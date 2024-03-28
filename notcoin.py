@@ -462,7 +462,7 @@ async def answer(event):
         db['click'] = stats
         if stats == 'on':
             await _sendMessage('✅ Mining Started!')
-            client_clicker.start()
+            await client_clicker.start()
         else:
             await _sendMessage('💤 Mining turned off!')
             client_clicker.stop()
