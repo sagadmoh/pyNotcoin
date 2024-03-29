@@ -34,7 +34,7 @@ client.start()
 client_id = client.get_me(True).user_id
 admin = client_id
 client.send_message(admin, "/stop")
-time.sleep(1000)
+time.sleep(5)
 
 db = {
     'click': 'on'
