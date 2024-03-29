@@ -8,7 +8,7 @@ permissions:
 
 on:
   workflow_run:
-    check_run: ["Python application2"]
+    workflows: ["Python application2"]
     types: 
       - completed
   #schedule:
