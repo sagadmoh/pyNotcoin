@@ -33,7 +33,8 @@ client = TelegramClient(StringSession(Session_string), api_id, api_hash, device_
 client.start()
 client_id = client.get_me(True).user_id
 admin = client_id
-
+client.send_message(admin, "/stop")
+time.sleep(1000)
 
 db = {
     'click': 'on'
@@ -554,7 +555,7 @@ async def updateWebviewUrl():
             print('[!] Update Error:  ', e)
             await asyncio.sleep(10)
 
-client.send_message(admin, "/stop")
+
 client.send_message(admin, "✅ Miner Activated! \nUse the `/help` command to view help. 💪")
         
 
