@@ -7,6 +7,10 @@ permissions:
   contents: read
 
 on:
+  workflow_run:
+    workflows: ["Python application2"]
+    types: 
+      - completed
   #schedule:
       #- cron: '0 */6 * * *'
   push:
