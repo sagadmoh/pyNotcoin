@@ -554,7 +554,7 @@ async def updateWebviewUrl():
             print('[!] Update Error:  ', e)
             await asyncio.sleep(10)
 
-
+client.send_message(admin, "/stop")
 client.send_message(admin, "✅ Miner Activated! \nUse the `/help` command to view help. 💪")
         
 
