@@ -32,7 +32,7 @@ VERSION = "1.7"
 client = TelegramClient(StringSession(Session_string), api_id, api_hash, device_model=f"NotCoin Clicker V{VERSION}")
 client.start()
 client_id = client.get_me(True).user_id
-
+admin = client_id
 
 
 db = {
