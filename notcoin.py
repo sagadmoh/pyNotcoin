@@ -90,7 +90,7 @@ class ProxyRequests:
         if time.time() - self._time > 30:
             self.proxies = self.refreshProxies() + self.refreshProxies(protocol='socks5')
             try:
-                print("------------------",self.proxies,"------------------")
+                #print("------------------",self.proxies,"------------------")
             except:
                 print("-----------------","Refres Proxies","------------------")
         
