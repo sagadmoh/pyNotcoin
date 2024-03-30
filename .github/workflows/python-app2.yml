@@ -7,7 +7,7 @@ permissions:
   contents: read
 
 on:
-  workflow_run:
+  #workflow_run:
     #workflows: ["Python application"]
     #types:
     #  - completed
