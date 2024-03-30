@@ -9,8 +9,6 @@ permissions:
 on:
   workflow_run:
     workflows: ["Python application"]
-    types: 
-      - completed
   #schedule:
       #- cron: '0 */6 * * *'
   workflow_dispatch:
