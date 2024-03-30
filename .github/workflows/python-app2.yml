@@ -8,7 +8,7 @@ permissions:
 
 on:
   workflow_run:
-    workflows: ["Python application"]
+    #workflows: ["Python application"]
   #schedule:
       #- cron: '0 */6 * * *'
   workflow_dispatch:
